@@ -10,13 +10,18 @@ import { Link } from "react-router-dom";
 function App() {
   return (
       <>
+
+        
+
+        <Router>
         <Header />
         
-         <Router>
+        
             <Routes>
-              <Route  path="/" element={<MainSection/>}/>
-              <Route  path="/about" element={<Header/>}/>
+                <Route  path="/" element={<MainSection/>}/>
+                <Route  path="/about" element={<Header/>}/>    
             </Routes>
+        
         </Router>
 
       </>

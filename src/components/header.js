@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from "react";
 import * as Scroll from 'react-scroll';
+import { Link } from "react-router-dom";
 
-let Button    = Scroll.Button;
-let Element   = Scroll.Element;
-let Events    = Scroll.Events;
-let scroll    = Scroll.animateScroll;
-let scrollSpy = Scroll.scrollSpy;
+
 
 
 function Header(){
 
     useEffect(() => {
-        Events.scrollEvent.register('begin', function(to, element) {
-          console.log('begin', arguments);
-        });
+       
     }, []);
 
     return (
@@ -29,10 +24,12 @@ function Header(){
                   <div className="collapse navbar-collapse" id="navbarSupportedContent">
                       <ul className="navbar-nav ml-auto">
                           <li className="nav-item">
-                              <a className="nav-link" href="#home">Home</a>
+                             
+                              <Link className="nav-link" to="/">Home</Link>
+
                           </li>
                           <li className="nav-item">
-                            
+                            <Link className="nav-link" to="/about">About</Link>
                           </li>
                           <li className="nav-item">
                               <a className="nav-link" href="#service">Services</a>
